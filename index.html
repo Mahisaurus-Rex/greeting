@@ -1,0 +1,45 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet"/>
+
+
+<form class="p-3">
+  <div class="form-group">
+    <label for="seeAnotherField">Was the greeting used correctly?</label>
+
+      <select class="form-control" id="seeAnotherField">
+        <option value="select">Select</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+  </div>
+  <div class="form-group" id="otherFieldDiv">
+    <label>Please mark what was incorrect.</label>
+    <br>
+      <label>
+        <input type="checkbox" id="quick_checkbox" onclick="error_function()"> Greeting not quick enough
+      </label>
+    <br>
+    <label>
+      <input type="checkbox" id="incorrect_checkbox" onclick="error_function()"> Incorrect greeting used
+    </label>
+    <br>
+    <label>
+      <input type="checkbox" id="name_checkbox" onclick="error_function()"> Name not included
+    </label>
+    <br>
+    <p id="errors" class="clipboard" style="display:none"></p>
+
+  </div>
+  <div class="form-group" id="otherFieldDiv1">
+
+    <label>
+      <input type="checkbox" id="express_checkbox" onclick="express_function()"> Express?
+    </label>
+    <p id="express" class="clipboard" style="display:none"></p>
+  </div>
+  <button onclick="copyToClipboard('.clipboard')">Copy To Clipboard</button>
+</form>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+<script src="main.js"></script>
